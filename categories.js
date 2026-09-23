@@ -2,7 +2,7 @@
 // NOVA SHOP - KATEGORIYALAR
 // ===============================================
 
-const CATEGORIES = [
+windov.CATEGORIES = [
     {
         name: 'Barcha mahsulotlar',
         icon: '🏠',
