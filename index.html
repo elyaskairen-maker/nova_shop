@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA SHOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+    <!-- SARLAVHA -->
+    <header class="shop-header">
+        <div class="shop-logo">
+            <img id="logo-img" src="" alt="Logo">
+        </div>
+        <h1 id="shop-title" class="shop-title">NOVA SHOP</h1>
+        <button id="cart-button" class="cart-button">
+            🛒 <span id="cart-counter">0</span>
+        </button>
+    </header>
+
+    <!-- QIDIRUV -->
+    <div class="search-section">
+        <input type="text" id="search-input" placeholder="🔍 Mahsulot qidirish...">
+    </div>
+
+    <!-- KATEGORIYALAR -->
+    <section class="categories-section">
+        <h2 class="section-title">📱 Kategoriyalar</h2>
+        <div id="categories-container" class="categories-container"></div>
+    </section>
+
+    <!-- MAHSULOTLAR -->
+    <section class="products-section">
+        <h2 class="section-title">🛍 Mahsulotlar</h2>
+        <main id="product-catalog" class="product-catalog"></main>
+    </section>
+
+    <!-- LOADER -->
+    <div id="loader" class="loader-container">
+        <div class="loader-spinner"></div>
+        <p>Mahsulotlar yuklanmoqda...</p>
+    </div>
+
+    <!-- SAVATCHA MODAL -->
+    <div id="cart-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="close-cart-button" class="close-button">×</button>
+            <h2>🛒 Savatchangiz</h2>
+            <div id="cart-items-container"></div>
+            
+            <div class="cart-summary" style="display: none;">
+                <strong>💰 Jami: <span id="cart-total-price">0 so'm</span></strong>
+            </div>
+            
+            <div id="order-form" style="display: none;">
+                <h3>📋 Buyurtma berish</h3>
+                <input type="text" id="customer-name-input" placeholder="👤 Ismingiz *" required>
+                <input type="text" id="organization-input" placeholder="👤 Familiyangiz *" required>
+                <input type="tel" id="phone-input" placeholder="📱 Telefon: +998901234567 *" required>
+                <input type="text" id="address-input" placeholder="📍 Manzilingiz *" required>
+                
+                <div class="payment-method-selection">
+                    <label>
+                        <input type="radio" name="payment-method" value="cash" checked> 
+                        💵 Naqd pul
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="card"> 
+                        💳 Karta
+                    </label>
+                </div>
+                
+                <button id="submit-order-button" class="submit-order-button">
+                    ✅ Buyurtma berish
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKRIPTLAR -->
+    <script src="config/shop-config.js"></script>
+    <script src="config/categories.js"></script>
+    <script src="data/catalog.js"></script>
+    <script src="js/app.js"></script>
+</body>
+  </html>
